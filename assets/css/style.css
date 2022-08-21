@@ -5,16 +5,31 @@ Custom CSS
 ***********************/
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-
+/* Chrome, Safari */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+    }
+    ::-webkit-scrollbar-track-piece  {
+    background-color: #C2D2E4;
+    }
+    ::-webkit-scrollbar-thumb:vertical {
+    height: 30px;
+    background-color: #0A4C95;
+    border-radius: 20px;
+    }
 a {
     text-decoration: none;
 }
+
 /*---------------------------------------
        PRE LOADER              
   -----------------------------------------*/
 
-  .preloader {
+.preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -61,6 +76,7 @@ a {
         transform: rotate(360deg);
     }
 }
+
 /************************
 Topbar CSS
 ***********************/
@@ -73,6 +89,7 @@ Topbar CSS
 #header .topbar-socials .left-info span {
     font-size: 14px;
 }
+
 /************************
 Navbar CSS
 ***********************/
@@ -107,7 +124,7 @@ Navbar CSS
     box-shadow: none !important;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 985px) {
     #header nav {
         position: absolute;
         z-index: 99999;
@@ -116,6 +133,12 @@ Navbar CSS
 
     #header .nav-item .nav-link {
         border-bottom: 1px solid rgba(78, 15, 15, 0.945);
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 }
 
@@ -294,6 +317,7 @@ Service Section CSS
 @media (max-width: 991.98px) {
     .services {
         border-left: none;
+        margin-top: 20px;
     }
 
     .services.noborder-bottom {
@@ -697,9 +721,11 @@ Single Page Section CSS
     padding: 30px 20px;
     position: relative;
 }
+
 .blog-details p {
     font-size: 14px;
 }
+
 .blog-details h3 {
     font-size: 18px;
     margin-bottom: 20px;
@@ -748,10 +774,12 @@ Single Page Section CSS
     transition: all 0.3s ease 0s;
     width: 50px;
 }
+
 .widget_search form button:hover,
-.tagcloud a{
+.tagcloud a {
     color: #000;
 }
+
 .widget_search form button:hover,
 .tagcloud a:hover {
     color: #0275d8;
@@ -774,6 +802,15 @@ Single Page Section CSS
     -webkit-box-shadow: 0 3px 7px #ddd;
     box-shadow: 0 3px 7px #ddd;
     margin-bottom: 50px;
-   
 }
-
+@media(max-width: 968px){
+    .mission-section .right-info{
+        margin-top: 30px;
+    }
+    .login-form .login-card{
+        margin-top: 70px!important;
+    }
+    .register-form .register-card{
+        margin-top: 70px!important;
+    }
+}
